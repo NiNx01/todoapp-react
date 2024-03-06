@@ -1,0 +1,62 @@
+* ,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  line-height: 1.5;
+}
+
+h1,h2,h3 {
+  line-height: 1.2;
+}
+
+.light {
+  --body-bg : hsl(241, 35%, 90%) ;
+  --purple-bg : hsl(240, 25%, 98%) ;
+  --heading-text : hsl(241, 30%, 27%) ;
+  --hr-color : hsl(240, 21%, 85%) ;
+  --add-task-bg : hsl(242, 30%, 94%) ;
+  --placeholder : hsl(240, 21%, 60%) ;
+  --accent : hsl(240, 70%, 60%) ;
+  --accent-hover : hsl(240, 70%, 65%) ;
+  --task-text : hsl(240, 21%, 20%) ;
+  --task-bg : hsla(240, 21%, 90%, 0.267)  ;
+  --task-hover : hsl(240, 35%, 95%);
+  --task-border : hsl(240, 21%, 92%) ;
+  --task-edit-outline : hsl(240, 30%, 80%) ;
+  --task-edit-bg : hsl(242, 40%, 98%) ;
+  --scrollbar-bg : hsl(242, 30%, 90%) ;
+  --scrollbar-thumb :hsl(241, 30%, 97%) ;
+  --scrollbar-hover : hsl(241, 30%, 98%);
+  --scrollbar-active : hsl(240, 25%, 98%);
+}
+
+.dark {
+  --body-bg : hsl(241, 35%, 20%) ;
+  --purple-bg : hsl(241, 30%, 27%) ;
+  --heading-text : hsl(240, 40%, 80%) ;
+  --hr-color : hsl(240, 21%, 30%) ;
+  --add-task-bg : hsl(242, 33%, 24%) ;
+  --placeholder : hsl(240, 21%, 40%) ;
+  --accent : hsl(240, 60%, 75%) ;
+  --accent-hover : hsl(240, 60%, 80%) ;
+  --task-text : hsl(240, 21%, 80%) ;
+  --task-bg : hsl(241, 30%, 27%) ;
+  --task-hover : hsla(240, 21%, 36%, 0.267) ;
+  --task-border : hsl(240, 21%, 36%) ;
+  --task-edit-outline : hsl(240, 21%, 36%) ;
+  --task-edit-bg : hsl(242, 33%, 24%) ;
+  --scrollbar-bg : hsl(242, 33%, 24%) ;
+  --scrollbar-thumb :hsl(241, 30%, 37%) ;
+  --scrollbar-hover : hsl(241, 30%, 47%);
+  --scrollbar-active : hsl(241, 30%, 30%);
+}
+
+body {
+background-color:  var(--body-bg);
+}

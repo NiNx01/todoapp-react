@@ -1,0 +1,45 @@
+.addtask {
+    background-color: var(--add-task-bg);
+    padding: 0.5em 0.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+}
+
+.addtask input {
+    flex-grow: 1;
+    background-color: transparent;
+    font: inherit;
+    border: none;
+    outline: none;
+    color: var(--heading-text);
+    padding-left: 0.5rem;
+}
+
+.addtask input::placeholder {
+    color: var(--placeholder);
+}
+
+.addtask button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    background-color: var(--accent);
+    color: var(--add-task-bg);
+    cursor: pointer;
+    transition: background-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.addtask button:hover {
+    background-color: var(--accent-hover);
+}
+
+.addtask:focus-within {
+    outline: 2px solid hsl(240, 21%, 60%);
+    
+}

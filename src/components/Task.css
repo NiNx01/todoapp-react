@@ -1,0 +1,97 @@
+.task {
+    border: 1px solid var(--task-border);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    color: var(--task-text);
+    background-color: var(--task-bg);
+    gap: 0.5rem;
+    transition: background-color 200ms ease-in-out,
+    color 200ms ease-in-out;
+    accent-color: hsl(240, 41%, 80%);
+}
+
+.task:hover {
+    background-color: var(--task-hover);
+}
+
+.task-completed {
+    background-color: #b9e4c3;
+    color: darkgreen;
+    accent-color: darkgreen;
+    
+}
+
+.task-completed:hover {
+    background-color: #b9e4c3;
+}
+
+.task-completed .task-name {
+    text-decoration: line-through ;
+}
+
+
+.task-check {
+    width: 20px;
+    height: 20px;
+    accent-color: inherit;
+}
+
+.task-name {
+    flex-grow: 1;
+    font-size: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    padding: 0.25rem 0;
+}
+
+.task-name-edit {
+    outline: 1px solid var(--task-edit-outline);
+    outline-offset: 2px;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    color: var(--task-text);
+    background-color: var(--task-edit-bg);
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    background-color: transparent;
+    transition: opacity 200ms ease-in-out;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1rem;
+    flex-shrink: 0;
+    outline: none;
+}
+
+.edit-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+.action-btn:focus {
+    outline: 2px solid hsl(240, 41%, 80%);
+    outline-offset: 2px;
+}
+
+.disabled-btn {
+    pointer-events: none;
+    opacity: 0.2;
+}

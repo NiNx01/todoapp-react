@@ -1,0 +1,100 @@
+.main-wrapper {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  min-width: 320px;
+  max-width: 480px;
+  background-color: var(--purple-bg);
+  height: 100svh;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+main::-webkit-scrollbar {
+  width: 1rem;
+  background-color: var(--scrollbar-bg);
+  border-radius: 1000px;
+}
+
+main::-webkit-scrollbar-thumb {
+  border: 2px solid var(--scrollbar-bg);
+  background-color: var(--scrollbar-thumb);
+  border-radius: 1000px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover);
+}
+
+main::-webkit-scrollbar-thumb:active {
+  background-color: var(--scrollbar-active);
+}
+
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--hr-color);
+  border-radius: 1000px;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  padding-left: 1rem;
+  color: var(--heading-text);
+  margin-bottom: 1rem;
+}
+
+.task-wrapper {
+  display: grid;
+  gap: 0.75rem;
+
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.dark-mode-text {
+  color: var(--heading-text);
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: var(--heading-text);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.no-tasks {
+  text-align: center;
+  padding: 1rem;
+  user-select: none;
+  color: var(--heading-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.25rem;
+  opacity: 0.8;
+  font-weight: 500;
+}

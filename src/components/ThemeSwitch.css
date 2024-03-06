@@ -1,0 +1,52 @@
+.toggle-btn {
+    position: relative;
+}
+
+.toggle-btn-bg {
+    width: 44px;
+    height: 24px;
+    background-color: var(--add-task-bg);
+    display: block;
+    cursor: pointer;
+    border-radius: 1000px;
+    position: relative;
+    outline: 1px solid hsl(240, 39%, 80%);
+    transition: background-color, outline;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.toggle-circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--heading-text);
+    opacity: 0.6;
+    border-radius: 1000px;
+    margin: 2px;
+    left: 0;
+    transform: translateX(0%);
+    transition: background-color, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.toggle-box {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin-left: -1px;
+    visibility: hidden;
+}
+
+.toggle-box:checked ~ .toggle-btn-bg .toggle-circle {
+    transform: translateX(100%);
+    background-color: hsl(242, 33%, 24%);
+    opacity: 1;
+}
+
+.toggle-box:checked ~ .toggle-btn-bg {
+    background-color: var(--accent);
+    outline: 1px solid hsl(242, 33%, 24%);
+}
