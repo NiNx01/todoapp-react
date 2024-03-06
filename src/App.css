@@ -8,7 +8,7 @@
 
 main {
   width: 100%;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 480px;
   background-color: var(--purple-bg);
   height: 100svh;
@@ -57,7 +57,7 @@ h2 {
 .task-wrapper {
   display: grid;
   gap: 0.75rem;
-
+  
 }
 
 .theme-switch-wrapper {

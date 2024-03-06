@@ -40,6 +40,8 @@
 
 .task-name {
     flex-grow: 1;
+    width: 100%;
+    min-width: 50px;
     font-size: 1rem;
     background-color: transparent;
     outline: none;
@@ -47,6 +49,7 @@
     color: inherit;
     font: inherit;
     padding: 0.25rem 0;
+    resize: none;
 }
 
 .task-name-edit {

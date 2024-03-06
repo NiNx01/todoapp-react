@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Task.css";
 import { useState } from "react";
 import { useToDoContext } from "../contexts";
@@ -17,6 +17,18 @@ function Task({ taskName }) {
     markAsComplete(taskName.id);
   };
 
+  const [rows, setRows] = useState(32) ;
+
+ useEffect(()=>{
+
+  const textarea = document.querySelector("textarea") ;
+  let textareaHeight = textarea.scrollHeight;
+
+  setRows(textareaHeight)
+
+ } , [rows])
+ 
+
   return (
     <div className={`task ${taskName.isCompleted ? "task-completed" : ""}`}>
       <input
@@ -26,13 +38,18 @@ function Task({ taskName }) {
         onChange={taskDone}
         disabled={isEditable}
       />
-      <input
-        type="text"
+      <textarea
+        style={{height : rows + "px"}}
         className={`task-name ${isEditable ? "task-name-edit" : "" }`}
         value={taskNameText}
-        onChange={(e) => setTaskNameText(e.target.value)}
+        onChange={(e) => {
+          return (
+            setTaskNameText(e.target.value)
+           )
+        }}
         readOnly={!isEditable}
-      />
+      >
+        </textarea>
       <button
         className={`action-btn edit-btn ${taskName.isCompleted ?"disabled-btn" : ""}`}
         onClick={() => {
